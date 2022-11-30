@@ -67,8 +67,7 @@
 					<ul class="nav navbar-nav">
 						<li><a href="<%=request.getContextPath()%>/GetPhone">Home</a></li>
 						<li><a href="<%=request.getContextPath()%>/GetShopPage">Shoppage</a></li>
-						<li class="active"><a
-							href="<%=request.getContextPath()%>/GetDetail">Single product</a></li>
+						
 						<li><a href="<%=request.getContextPath()%>/AddToCart">Cart</a></li>
 						<li><a href="<%=request.getContextPath()%>/Checkout">Checkout</a></li>
 
