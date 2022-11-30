@@ -25,7 +25,7 @@ public class DBUtils {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		conn = DriverManager.getConnection(url, user, password);
 		return conn;
-
+		//
 	}
 
 }
