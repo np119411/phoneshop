@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import com.phoneshop.SendMail;
 import com.phoneshop.phones.PhoneDAO;
 import com.phoneshop.phones.PhoneDTO;
 import com.phoneshop.shopping.Cart;
@@ -47,6 +49,14 @@ public class Checkout extends HttpServlet {
         try {
         	HttpSession session = request.getSession();
             Cart cart = (Cart) session.getAttribute("CART");
+            
+            String action = request.getParameter("action");
+            if (action!= null && action.equals("checkout")) {
+            	String address = request.getParameter("billing_address_1");
+                
+                
+                SendMail.sendMail("19110096@student.hcmute.edu.vn", cart, address);
+            }
             
             
             PhoneDAO dao = new PhoneDAO();

@@ -16,6 +16,7 @@ D:\UploadGit\phoneshop\src\main\java\com\phoneshop\utils\CloudinaryUtil.java
 D:\UploadGit\phoneshop\src\main\java\com\phoneshop\controller\AddProductController.java
 D:\UploadGit\phoneshop\src\main\java\com\phoneshop\controller\DeleteProductController.java
 D:\UploadGit\phoneshop\src\main\java\com\phoneshop\orders\OrderDetail.java
+D:\UploadGit\phoneshop\src\main\java\com\phoneshop\SendMail.java
 D:\UploadGit\phoneshop\src\main\java\com\phoneshop\shopping\CartProduct.java
 D:\UploadGit\phoneshop\src\main\java\com\phoneshop\controller\GetDetail.java
 D:\UploadGit\phoneshop\src\main\java\com\phoneshop\users\UserDTO.java

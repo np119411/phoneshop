@@ -69,7 +69,7 @@
 							href="<%=request.getContextPath()%>/GetPhone">Home</a></li>
 						<li><a href="<%=request.getContextPath()%>/GetShopPage">Shop
 								page</a></li>
-						
+
 						<li><a href="<%=request.getContextPath()%>/AddToCart">Cart</a></li>
 						<li class="active"><a
 							href="<%=request.getContextPath()%>/Checkout">Checkout</a></li>
@@ -166,7 +166,7 @@
 								<div class="clear"></div>
 							</form>
 
-							<form enctype="multipart/form-data" action="#" class="checkout"
+							<form enctype="multipart/form-data" action="<%=request.getContextPath()%>/Checkout?action=checkout" class="checkout"
 								method="post" name="checkout">
 
 								<div id="customer_details" class="col2-set">
@@ -179,6 +179,7 @@
 												<label class="" for="billing_first_name">First Name
 												</label> <input type="text" value="" placeholder=""
 													id="billing_first_name" name="billing_first_name"
+													required = ""
 													class="input-text ">
 											</p>
 
@@ -186,14 +187,14 @@
 												class="form-row form-row-last validate-required">
 												<label class="" for="billing_last_name">Last Name </label> <input
 													type="text" value="" placeholder="" id="billing_last_name"
-													name="billing_last_name" class="input-text ">
+													name="billing_last_name"  required = "" class="input-text ">
 											</p>
 											<div class="clear"></div>
 
 											<p id="billing_address_1_field"
 												class="form-row form-row-wide address-field validate-required">
 												<label class="" for="billing_address_1">Address </label> <input
-													type="text" value="" placeholder="Your Address"
+													type="text" placeholder="Your Address"
 													id="billing_address_1" name="billing_address_1"
 													class="input-text ">
 											</p>
@@ -203,7 +204,7 @@
 												class="form-row form-row-first validate-required validate-email">
 												<label class="" for="billing_email">Email Address </label> <input
 													type="text" value="" placeholder="abc@example.com"
-													id="billing_email" name="billing_email" class="input-text ">
+													id="billing_email" name="billing_email" required = "" class="input-text ">
 											</p>
 
 											<p id="billing_phone_field"
@@ -229,7 +230,7 @@
 									<c:forEach var="item1" items="${CART.lineItems}" begin='0'
 										end='0'>
 										<c:forEach var="item" items="${CART.lineItems}">
-										
+
 											<table class="shop_table">
 												<thead>
 													<tr>
@@ -247,21 +248,21 @@
 											</table>
 										</c:forEach>
 										<table class="shop_table">
-										<tfoot>
-											<tr class="shipping">
-												<th>Shipping and Handling</th>
-												<td>Free Shipping <input type="hidden"
-													class="shipping_method" value="free_shipping"
-													id="shipping_method_0" data-index="0"
-													name="shipping_method[0]">
-												</td>
-											</tr>
-											<tr class="order-total">
-												<th>Order Total</th>
-												<td><strong><span class="amount">${CART.totalPrice}</span></strong>
-												</td>
-											</tr>
-										</tfoot>
+											<tfoot>
+												<tr class="shipping">
+													<th>Shipping and Handling</th>
+													<td>Free Shipping <input type="hidden"
+														class="shipping_method" value="free_shipping"
+														id="shipping_method_0" data-index="0"
+														name="shipping_method[0]">
+													</td>
+												</tr>
+												<tr class="order-total">
+													<th>Order Total</th>
+													<td><strong><span class="amount">${CART.totalPrice}</span></strong>
+													</td>
+												</tr>
+											</tfoot>
 										</table>
 									</c:forEach>
 
